@@ -13,4 +13,5 @@ jobs:
     - name: Build docker image
       run: docker build -t towns .
     - name: Run container
-      run: docker run --rm -v $(pwd)/data:/data -t towns /test.txt
+      run: |
+        docker run --rm -v $(pwd)/data:/data -t towns /test.txt
