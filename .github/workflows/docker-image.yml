@@ -31,7 +31,7 @@ jobs:
       with:
         image: towns:dist
         run: |
-         sh ./entrypoint.sh towns.txt
+          echo "test run"
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
