@@ -23,13 +23,15 @@ jobs:
       #uses: docker/build-push-action@v2
       run: docker build -t towns:dist .
       id: docker_build
+      with:
+        context: .
 
     - name: Run entrypoint
       uses: addnab/docker-run-action@v3
       with:
         image: towns:dist
         run: |
-          echo "test run"
+          docker run -t towns:dist
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
