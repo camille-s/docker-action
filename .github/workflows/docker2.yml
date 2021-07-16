@@ -11,6 +11,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Build docker image
-      run: docker build -t towns < .devcontainer/Dockerfile
+      run: docker build -t towns .
     - name: Run container
       run: docker run --rm -t towns
