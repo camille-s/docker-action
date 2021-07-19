@@ -24,7 +24,11 @@ jobs:
         load: true
 
     - name: Run script
-      uses: kohlerdominik/docker-run-action@v1
-      with:
-        image: towns:latest
-        run: pwd
+      run: |
+        docker image ls
+        ls
+          # - name: Run script
+          #   uses: kohlerdominik/docker-run-action@v1
+          #   with:
+          #     image: towns:latest
+          #     run: pwd
