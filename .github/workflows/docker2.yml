@@ -19,6 +19,6 @@ jobs:
     
     - name: Run container
       run: |
-        docker run --rm -v $(pwd)/data:/data -t towns /test.txt
+        docker run --rm -v /data:/data -t towns /test.txt
       with:
         context: .
