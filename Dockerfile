@@ -5,4 +5,4 @@ COPY test.txt /test.txt
 
 RUN mkdir /data
 RUN pwd && ls
-ENTRYPOINT /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]

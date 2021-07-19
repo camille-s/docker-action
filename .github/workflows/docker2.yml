@@ -25,4 +25,4 @@ jobs:
 
     - name: Run script
       run: |
-        docker run -t towns:latest
+        docker run -t towns:latest "okay test text"
